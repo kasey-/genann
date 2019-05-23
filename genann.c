@@ -97,6 +97,10 @@ double inline genann_act_sigmoid_cached(const genann *ann unused, double a) {
     return lookup[j];
 }
 
+double inline genann_act_relu(const struct genann *ann unused, double a) {
+    return (a > 0.0) ? a : 0.0;
+}
+
 double inline genann_act_linear(const struct genann *ann unused, double a) {
     return a;
 }
